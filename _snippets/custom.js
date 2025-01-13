@@ -52,4 +52,20 @@
 
   { trigger: "sq", replacement: "\\sqrt ", options: "mA" }, // Manual brackets, like everywhere else
   { trigger: /(\d)rt/, replacement: "\\sqrt[[[0]]]{$0} $1", options: "mA"}, // Nth root
+
+
+  { trigger: "or", replacement: "\\lor", options: "mA" },
+  { trigger: "|", replacement: "\\lor$0", options: "mA" },
+
+  { trigger: "and", replacement: "\\land", options: "mA" },
+  { trigger: "&", replacement: "\\land$0", options: "mA" },
+
+  { trigger: "not", replacement: "\\neg", options: "mA" },
+  { trigger: "!", replacement: "\\land$0", options: "mA" },
+
+  { trigger: "xor", replacement: "\\oplus", options: "mA" },
+
+  { trigger: "imp", replacement: "\\implies", options: "mA" },
+  { trigger: "=>", replacement: "\\implies", options: "mA" },
+
 ]
