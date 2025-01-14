@@ -50,7 +50,7 @@
   {trigger: "deg", replacement: "^{\\circ}", options: "mA"}, // Degree symbol
   {trigger: "inv", replacement: "^{-1}", options: "mA"}, // Inverse
 
-  { trigger: "sq", replacement: "\\sqrt ", options: "mA" }, // Manual brackets, like everywhere else
+  { trigger: "sq", replacement: "\\sqrt{ $0 }$1", options: "mA" }, // Manual brackets, like everywhere else
   { trigger: /(\d)rt/, replacement: "\\sqrt[[[0]]]{$0} $1", options: "mA"}, // Nth root
 
 
