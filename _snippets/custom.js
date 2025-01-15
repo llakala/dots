@@ -57,6 +57,8 @@
   { trigger: "i(sin|cos|tan|csc|sec|cot)", replacement: "[[0]]^{-1}", options: "rmA", priority: 1},
   { trigger: "a(sin|cos|tan|csc|sec|cot)", replacement: "\\arc[[0]]", options: "rmA", priority: 1},
 
+
+  // Conditional logic
   { trigger: "or", replacement: "\\lor", options: "mA" },
   { trigger: "|", replacement: "\\lor$0", options: "mA" },
 
@@ -64,11 +66,27 @@
   { trigger: "&", replacement: "\\land$0", options: "mA" },
 
   { trigger: "not", replacement: "\\neg", options: "mA" },
-  { trigger: "!", replacement: "\\land$0", options: "mA" },
+  { trigger: "!", replacement: "\\neg$0", options: "mA" },
 
   { trigger: "xor", replacement: "\\oplus", options: "mA" },
 
   { trigger: "imp", replacement: "\\implies", options: "mA" },
   { trigger: "=>", replacement: "\\implies", options: "mA" },
+
+  { trigger: "exists", replacement: "\\exists", options: "mA" },
+  { trigger: "inn", replacement: "\\in", options: "mA" },
+
+
+  // Existing presets that I don't currently cover
+  { trigger: "<->", replacement: "\\leftrightarrow ", options: "mA" },
+  // { trigger: "!>", replacement: "\\mapsto", options: "mA" }, // NOT WORKING RIGHT NOW
+  { trigger: "=<", replacement: "\\impliedby", options: "mA" },
+  { trigger: "yorr", replacement: "\\cup", options: "mA" },
+  { trigger: "notin", replacement: "\\not\\in", options: "mA" },
+  { trigger: "\\\\\\", replacement: "\\setminus", options: "mA" },
+  { trigger: "sub=", replacement: "\\subseteq", options: "mA" },
+  { trigger: "sup=", replacement: "\\supseteq", options: "mA" },
+  { trigger: "eset", replacement: "\\emptyset", options: "mA" },
+  { trigger: "set", replacement: "\\{ $0 \\}$1", options: "mA" },
 
 ]
