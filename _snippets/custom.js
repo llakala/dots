@@ -10,7 +10,6 @@
   {trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
 
-  {trigger: "dydx", replacement: "\\dfrac{dy}{dx}", options: "mA"},
   {trigger: "dx", replacement: "\\dfrac{d}{dx}\\left[ $0 \\right] $1", options: "m"},
   {trigger: "lim", replacement: "\\lim_{${0:x} \\to ${1:\\infty}} $2", options: "mA"},
 
@@ -45,7 +44,6 @@
 
   {trigger: "->", replacement: "\\to", options: "mA" },
 
-  {trigger: "==", replacement: "&=", options: "mA"}, // Align equals
   // {trigger: "abs", replacement: "|$0|$1", options: "mA" },
 
   {trigger: "^o", replacement: "^\\circ", options: "mA"}, // Degree symbol
