@@ -22,9 +22,10 @@
   // `|` symbol for integrals
   {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}} $2", options: "mA" },
 
-  // Constant before integral
-  {trigger: /([^\\])int/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x} $4", options: "mA", priority: -1}, // Constant before int
-  {trigger: "fint", replacement: "\\int $0 \\, d${1:x} $2", options: "mA" }, // Constant before int
+  // Indefinite and definite integrals, with a constant beforehand if needed
+  {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x} $2", options: "mA", priority: -1}, // Constant before int
+  {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x} $4", options: "mA", priority: -1}, // Constant before int
+
 
   // Weird types of integrals
   {trigger: "oint", replacement: "\\oint", options: "mA"},
