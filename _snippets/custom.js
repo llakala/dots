@@ -37,9 +37,9 @@
     trigger: "A", replacement: (sel) =>
     {
       let processed = sel.replace(/=/g, "&="); // Replace with align-equals
-      processed = processed.replace(/\n/g, " \\\\\n"); // Replace & delineate newlines 
+      processed = processed.replace(/\n/g, " \\\\\n"); // Replace & delineate newlines
       return `\\begin{align}\n${processed}\n\\end{align}`; // Wrap with align environment
-    }, 
+    },
     options: "mvA"
   },
 
@@ -48,12 +48,14 @@
   {trigger: "==", replacement: "&=", options: "mA"}, // Align equals
   // {trigger: "abs", replacement: "|$0|$1", options: "mA" },
 
-  {trigger: "deg", replacement: "^{\\circ}", options: "mA"}, // Degree symbol
-  {trigger: "inv", replacement: "^{-1}", options: "mA"}, // Inverse
+  {trigger: "^o", replacement: "^\\circ", options: "mA"}, // Degree symbol
 
   { trigger: "sq", replacement: "\\sqrt{ $0 }$1", options: "mA" }, // Manual brackets, like everywhere else
   { trigger: /(\d)rt/, replacement: "\\sqrt[[[0]]]{$0} $1", options: "mA"}, // Nth root
 
+  // Inverse / arc sin functions quickly
+  { trigger: "i(sin|cos|tan|csc|sec|cot)", replacement: "[[0]]^{-1}", options: "rmA", priority: 1},
+  { trigger: "a(sin|cos|tan|csc|sec|cot)", replacement: "\\arc[[0]]", options: "rmA", priority: 1},
 
   { trigger: "or", replacement: "\\lor", options: "mA" },
   { trigger: "|", replacement: "\\lor$0", options: "mA" },
