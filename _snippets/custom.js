@@ -10,20 +10,20 @@
   {trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
 
-  {trigger: "dx", replacement: "\\dfrac{d}{dx}\\left[ $0 \\right] $1", options: "m"},
-  {trigger: "lim", replacement: "\\lim_{${0:x} \\to ${1:\\infty}} $2", options: "mA"},
+  {trigger: "dx", replacement: "\\dfrac{d}{dx}\\left[ $0 \\right]$1", options: "m"},
+  {trigger: "lim", replacement: "\\lim_{${0:x} \\to ${1:\\infty}}$2", options: "mA"},
 
   // Sum and prod auto expanded
-  {trigger: "sum", replacement: "\\sum_{${0:i}=${1:1}}^{${2:N}} $3", options: "mA"},
-  {trigger: "isum", replacement: "\\sum_{${0:i}=${1:1}}^{\\infty} $2", options: "mA"}, // Infinite sum
-  {trigger: "prod", replacement: "\\prod_{${0:i}=${1:1}}^{${2:N}} $3", options: "mA"},
+  {trigger: "sum", replacement: "\\sum_{${0:i}=${1:1}}^{${2:N}}$3", options: "mA"},
+  {trigger: "isum", replacement: "\\sum_{${0:i}=${1:1}}^{\\infty}$2", options: "mA"}, // Infinite sum
+  {trigger: "prod", replacement: "\\prod_{${0:i}=${1:1}}^{${2:N}}$3", options: "mA"},
 
   // `|` symbol for integrals
-  {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}} $2", options: "mA" },
+  {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}}$2", options: "mA" },
 
   // Indefinite and definite integrals, with a constant beforehand if needed
-  {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x} $2", options: "mA", priority: -1}, // Constant before int
-  {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x} $4", options: "mA", priority: -1}, // Constant before int
+  {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x}$2", options: "mA", priority: -1}, // Constant before int
+  {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x}$4", options: "mA", priority: -1}, // Constant before int
 
 
   // Weird types of integrals
