@@ -20,6 +20,7 @@
 
   // `|` symbol for integrals
   {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}}$2", options: "mA" },
+  {trigger: "abs", replacement: "|$0|$1", options: "mA"},
 
   // Indefinite and definite integrals, with a constant beforehand if needed
   {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x}$2", options: "mA", priority: -1}, // Constant before int
@@ -44,8 +45,6 @@
 
   {trigger: "->", replacement: "\\to", options: "mA" },
 
-  // {trigger: "abs", replacement: "|$0|$1", options: "mA" },
-
   {trigger: "^o", replacement: "^\\circ", options: "mA"}, // Degree symbol
 
   { trigger: "sq", replacement: "\\sqrt{ $0 }$1", options: "mA" }, // Manual brackets, like everywhere else
@@ -58,7 +57,7 @@
 
   // Conditional logic
   { trigger: "or", replacement: "\\lor", options: "mA" },
-  { trigger: "|", replacement: "\\lor$0", options: "mA" },
+  { trigger: "|", replacement: "\\lor$0", options: "mA" }, // This breaks absolute value, so we use abs snippet instead
 
   { trigger: "and", replacement: "\\land", options: "mA" },
   { trigger: "&", replacement: "\\land$0", options: "mA" },
