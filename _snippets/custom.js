@@ -52,8 +52,8 @@
   { trigger: /(\d)rt/, replacement: "\\sqrt[[[0]]]{$0} $1", options: "mA"}, // Nth root
 
   // Inverse / arc sin functions quickly
-  { trigger: "i(sin|cos|tan|csc|sec|cot)", replacement: "[[0]]^{-1}", options: "rmA", priority: 1},
-  { trigger: "a(sin|cos|tan|csc|sec|cot)", replacement: "\\arc[[0]]", options: "rmA", priority: 1},
+  { trigger: /i(sin|cos|tan|csc|sec|cot)/, replacement: "[[0]]^{-1}", options: "mA", priority: 1},
+  { trigger: /a(sin|cos|tan|csc|sec|cot)/, replacement: "\\arc[[0]]", options: "mA", priority: 1},
 
 
   // Conditional logic
