@@ -9,8 +9,9 @@
   {trigger: "ml", replacement: "$$\n\\begin{gather}\n$0\n\\end{gather}\n$$$1", options: "tAw" }, // Multiline
   {trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
+  {trigger: /dd([a-ce-z])/, replacement: "\\dfrac{d}{d[[0]]}\\left[ $0 \\right]$1", options: "mA"},
+  {trigger: /d([a-ce-z])d([a-ce-z])/, replacement: "\\dfrac{d[[0]]}{d[[1]]}\\left[ $0 \\right]$1", options: "mA"},
 
-  {trigger: "dx", replacement: "\\dfrac{d}{dx}\\left[ $0 \\right]$1", options: "m"},
   {trigger: "lim", replacement: "\\lim_{${0:x} \\to ${1:\\infty}}$2", options: "mA"},
 
   // Sum and prod auto expanded
