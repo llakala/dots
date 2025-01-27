@@ -3,6 +3,8 @@
   {trigger: "#t", replacement: "\\text{$0} $1", options: "mA"},
   {trigger: "#b", replacement: "\\mathbf{$0}", options: "mA"},
   {trigger: "#n", replacement: "\\mathrm{$0}", options: "mA"},
+  {trigger: "#m", replacement: "\\mathbb{$0}", options: "mA"},
+
 
   {trigger: "mk", replacement: "$$0$", options: "tA"},
   {trigger: "dm", replacement: "$$\n$0\n$$", options: "tAw"},
