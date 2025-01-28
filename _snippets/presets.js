@@ -87,7 +87,7 @@
   { trigger: "**", replacement: "\\cdot", options: "mA" },
   { trigger: "para", replacement: "\\parallel", options: "mA" },
 
-  { trigger: "===", replacement: "\\equiv", options: "mA" },
+  { trigger: "==", replacement: "\\equiv", options: "mA" },
   { trigger: "!=", replacement: "\\neq", options: "mA" },
   { trigger: ">=", replacement: "\\geq", options: "mA" },
   { trigger: "<=", replacement: "\\leq", options: "mA" },
