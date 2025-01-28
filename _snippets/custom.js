@@ -25,6 +25,9 @@
   {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}}$2", options: "mA" },
   {trigger: "abs", replacement: "|$0|$1", options: "mA"},
 
+  {trigger: "tta", replacement: "\\theta", options: "mA"},
+
+
   // Indefinite and definite integrals, with a constant beforehand if needed
   {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x}$2", options: "mA", priority: -1}, // Constant before int
   {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x}$4", options: "mA", priority: -1}, // Constant before int
