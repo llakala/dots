@@ -70,7 +70,9 @@
 
   // Inverse / arc sin functions quickly
   { trigger: /i(sin|cos|tan|csc|sec|cot)/, replacement: "[[0]]^{-1}", options: "mA", priority: 1},
-  { trigger: /a(sin|cos|tan|csc|sec|cot)/, replacement: "\\arc[[0]]", options: "mA", priority: 1},
+  { trigger: /a(sin|cos|tan)/, replacement: "\\arc[[0]]($0)$1", options: "mA", priority: 1},
+  { trigger: /a(csc|sec|cot)/, replacement: "\\text{arc[[0]]}($0)$1", options: "mA", priority: 1},
+
 
 
   // Conditional logic
