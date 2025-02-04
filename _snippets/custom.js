@@ -76,7 +76,7 @@
 
 
   // Conditional logic
-  { trigger: "or", replacement: "\\lor", options: "mA" },
+  { trigger: "or", replacement: "\\lor", options: "mA", priority: -1 },
   { trigger: "|", replacement: "\\lor$0", options: "mA" }, // This breaks absolute value, so we use abs snippet instead
 
   { trigger: "and", replacement: "\\land", options: "mA" },
@@ -90,8 +90,12 @@
   { trigger: "imp", replacement: "\\implies", options: "mA" },
   { trigger: "=>", replacement: "\\implies", options: "mA" },
 
-  { trigger: "exists", replacement: "\\exists", options: "mA" },
-  { trigger: "inn", replacement: "\\in", options: "mA" },
+  { trigger: "exi", replacement: "\\exists", options: "mA" },
+  { trigger: "iin", replacement: "\\in", options: "mA", priority: -1 },
+  { trigger: "nin", replacement: "\\notin", options: "mA" },
+
+
+  { trigger: "for", replacement: "\\forall", options: "mA" },
 
 
   // Existing presets that I don't currently cover
