@@ -97,13 +97,6 @@
   { trigger: "sim=", replacement: "\\simeq", options: "mA" },
   { trigger: "prop", replacement: "\\propto", options: "mA" },
 
-  { trigger: "LL", replacement: "\\mathcal{L}", options: "mA" },
-  { trigger: "HH", replacement: "\\mathcal{H}", options: "mA" },
-  { trigger: "CC", replacement: "\\mathbb{C}", options: "mA" },
-  { trigger: "RR", replacement: "\\mathbb{R}", options: "mA" },
-  { trigger: "Z", replacement: "\\mathbb{Z}", options: "mA" },
-  { trigger: "NN", replacement: "\\mathbb{N}", options: "mA" },
-
   // Handle spaces and backslashes
 
   // Snippet variables can be used as shortcuts when writing snippets.
