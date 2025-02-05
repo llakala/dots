@@ -14,7 +14,7 @@
   { trigger: "ZZ", replacement: "\\mathbb{Z}", options: "mA" }, // // Integers
   { trigger: "NN", replacement: "\\mathbb{N}", options: "mA" }, // Natural Numbers
   { trigger: "QQ", replacement: "\\mathbb{Q}", options: "mA" }, // Rationals
-
+  { trigger: "PP", replacement: "\\mathbb{P}", options: "mA" }, // Imaginaries
 
   {trigger: "mk", replacement: "$$0$", options: "tA"},
   {trigger: "dm", replacement: "$$\n$0\n$$", options: "tAw"},
