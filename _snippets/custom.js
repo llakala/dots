@@ -89,24 +89,31 @@
   { trigger: "=>", replacement: "\\implies", options: "mA" },
 
   { trigger: "exi", replacement: "\\exists", options: "mA" },
+  { trigger: "for", replacement: "\\forall", options: "mA" },
+
   { trigger: "iin", replacement: "\\in", options: "mA", priority: -1 },
   { trigger: "nin", replacement: "\\notin", options: "mA" },
 
+  { trigger: "uni", replacement: "\\cup", options: "mA" },
+  { trigger: "set", replacement: "\\{ $0 \\}$1", options: "mA" },
 
-  { trigger: "for", replacement: "\\forall", options: "mA" },
+  { trigger: "sub", replacement: "\\subseteq", options: "mA" },
+  { trigger: "sup", replacement: "\\supseteq", options: "mA" },
+  { trigger: "nsub", replacement: "\\nsubseteq", options: "mA" },
+  { trigger: "nsup", replacement: "\\nsupseteq", options: "mA" },
 
+  { trigger: "psub", replacement: "\\subset", options: "mA" },
+  { trigger: "psup", replacement: "\\supset", options: "mA" },
+  { trigger: "npsub", replacement: "\\not\\subset", options: "mA" },
+  { trigger: "npsup", replacement: "\\not\\supset", options: "mA" },
 
   // Existing presets that I don't currently cover
   { trigger: "<->", replacement: "\\leftrightarrow ", options: "mA" },
   // { trigger: "!>", replacement: "\\mapsto", options: "mA" }, // NOT WORKING RIGHT NOW
   { trigger: "=<", replacement: "\\impliedby", options: "mA" },
-  { trigger: "yorr", replacement: "\\cup", options: "mA" },
   { trigger: "notin", replacement: "\\not\\in", options: "mA" },
   { trigger: "\\\\\\", replacement: "\\setminus", options: "mA" },
-  { trigger: "sub=", replacement: "\\subseteq", options: "mA" },
-  { trigger: "sup=", replacement: "\\supseteq", options: "mA" },
   { trigger: "eset", replacement: "\\emptyset", options: "mA" },
-  { trigger: "set", replacement: "\\{ $0 \\}$1", options: "mA" },
 
    {
     trigger: /table_(\d+)_(\d+)/, replacement: (match) => {
