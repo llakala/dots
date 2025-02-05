@@ -37,11 +37,9 @@
 
   {trigger: "tta", replacement: "\\theta", options: "mA"},
 
-
   // Indefinite and definite integrals, with a constant beforehand if needed
   {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x}$2", options: "mA", priority: -1},
   {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x}$4", options: "mA", priority: -1},
-
 
   // Weird types of integrals
   {trigger: "oint", replacement: "\\oint", options: "mA"},
@@ -71,9 +69,6 @@
   { trigger: /a(sin|cos|tan)/, replacement: "\\arc[[0]]($0)$1", options: "mA", priority: 1},
   { trigger: /a(csc|sec|cot)/, replacement: "\\text{arc[[0]]}($0)$1", options: "mA", priority: 1},
 
-
-
-  // Conditional logic
   { trigger: "or", replacement: "\\lor", options: "mA", priority: -1 },
   { trigger: "|", replacement: "\\lor$0", options: "mA" }, // This breaks absolute value, so we use abs snippet instead
 
@@ -115,7 +110,7 @@
   { trigger: "\\\\\\", replacement: "\\setminus", options: "mA" },
   { trigger: "eset", replacement: "\\emptyset", options: "mA" },
 
-   {
+  {
     trigger: /table_(\d+)_(\d+)/, replacement: (match) => {
       const cols = match[1];
       const rows = match[2];
