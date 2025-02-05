@@ -1,6 +1,4 @@
 [
-
-
   {trigger: "(?<=\n)#t", replacement: "\\text{$0 }$1", options: "mrA"}, // Text at the beginning of a line
   {trigger: "#t", replacement: "\\text{ $0 }$1", options: "mA", priority: -1}, // Text that isn't at the beginning of a line
 
@@ -41,8 +39,8 @@
 
 
   // Indefinite and definite integrals, with a constant beforehand if needed
-  {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x}$2", options: "mA", priority: -1}, // Constant before int
-  {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x}$4", options: "mA", priority: -1}, // Constant before int
+  {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x}$2", options: "mA", priority: -1},
+  {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x}$4", options: "mA", priority: -1},
 
 
   // Weird types of integrals
