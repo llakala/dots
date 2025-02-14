@@ -1,20 +1,22 @@
 [
-  {trigger: "(?<=\n)#t", replacement: "\\text{$0 }$1", options: "mrA"}, // Text at the beginning of a line
-  {trigger: "#t", replacement: "\\text{ $0 }$1", options: "mA", priority: -1}, // Text that isn't at the beginning of a line
+  {trigger: "(?<=\n)#t", replacement: "\\text{$0 } $1", options: "mrA"}, // Text at the beginning of a line
+  {trigger: "#t", replacement: "\\text{ $0 } $1", options: "mA", priority: -1}, // Text that isn't at the beginning of a line
 
   {trigger: "#d", replacement: "\\displaystyle ", options: "mA"},
   {trigger: "#b", replacement: "\\mathbf{$0}", options: "mA"},
   {trigger: "#n", replacement: "\\mathrm{$0}", options: "mA"},
   {trigger: "#m", replacement: "\\mathbb{$0}", options: "mA"},
 
+  { trigger: "@d", replacement: "\\Delta", options: "mA" },
+  { trigger: "@D", replacement: "\\delta", options: "mA" },
+  { trigger: "@e", replacement: "\\mathcal{E}", options: "mA" },
+
+  // Block letters
+  { trigger: /([A-GI-KM-Z]){2}/, replacement: "\\mathbb{[[0]]}", options: "mA" },
+  { trigger: /\\mathbb{(\w)}([\+\-])/, replacement: "\\mathbb{[[0]]}^[[1]]", options: "mA" }, // Positive/negative
   { trigger: "LL", replacement: "\\mathcal{L}", options: "mA" },
   { trigger: "HH", replacement: "\\mathcal{H}", options: "mA" },
-  { trigger: "CC", replacement: "\\mathbb{C}", options: "mA" },
-  { trigger: "RR", replacement: "\\mathbb{R}", options: "mA" }, // Reals
-  { trigger: "ZZ", replacement: "\\mathbb{Z}", options: "mA" }, // // Integers
-  { trigger: "NN", replacement: "\\mathbb{N}", options: "mA" }, // Natural Numbers
-  { trigger: "QQ", replacement: "\\mathbb{Q}", options: "mA" }, // Rationals
-  { trigger: "PP", replacement: "\\mathbb{P}", options: "mA" }, // Imaginaries
+
 
   {trigger: "mk", replacement: "$$0$", options: "tA"},
   {trigger: "dm", replacement: "$$\n$0\n$$", options: "tAw"},
@@ -24,22 +26,22 @@
   {trigger: /dd([a-ce-z])/, replacement: "\\dfrac{d}{d[[0]]}\\left[ $0 \\right]$1", options: "mA"},
   {trigger: /d([a-ce-z])d([a-ce-z])/, replacement: "\\dfrac{d[[0]]}{d[[1]]}\\left[ $0 \\right]$1", options: "mA"},
 
-  {trigger: "lim", replacement: "\\lim_{${0:x} \\to ${1:\\infty}}$2", options: "mA"},
+  {trigger: "lim", replacement: "\\lim_{${0:x} \\to ${1:\\infty}} $2", options: "mA"},
 
   // Sum and prod auto expanded
-  {trigger: "sum", replacement: "\\sum_{${0:i}=${1:1}}^{${2:N}}$3", options: "mA"},
-  {trigger: "isum", replacement: "\\sum_{${0:i}=${1:1}}^{\\infty}$2", options: "mA"}, // Infinite sum
-  {trigger: "prod", replacement: "\\prod_{${0:i}=${1:1}}^{${2:N}}$3", options: "mA"},
+  {trigger: "sum", replacement: "\\sum_{${0:i}=${1:1}}^{${2:N}} $3", options: "mA"},
+  {trigger: "isum", replacement: "\\sum_{${0:i}=${1:1}}^{\\infty} $2", options: "mA"}, // Infinite sum
+  {trigger: "prod", replacement: "\\prod_{${0:i}=${1:1}}^{${2:N}} $3", options: "mA"},
 
   // `|` symbol for integrals
-  {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}}$2", options: "mA" },
+  {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}}$2", options: "mA", priority: -1 },
   {trigger: "abs", replacement: "|$0|$1", options: "mA"},
 
   {trigger: "tta", replacement: "\\theta", options: "mA"},
 
   // Indefinite and definite integrals, with a constant beforehand if needed
-  {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x}$2", options: "mA", priority: -1},
-  {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x}$4", options: "mA", priority: -1},
+  {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x} $2", options: "mA", priority: -1},
+  {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x} $4", options: "mA", priority: -1},
 
   // Weird types of integrals
   {trigger: "oint", replacement: "\\oint", options: "mA"},
