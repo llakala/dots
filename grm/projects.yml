@@ -1,0 +1,33 @@
+trees:
+- root: ~/Documents/projects
+  repos:
+  - name: menu
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/llakala/menu.git
+      type: https
+  - name: llakaLib
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/llakala/llakaLib.git
+      type: https
+  - name: dots
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/llakala/dots.git
+      type: https
+  - name: meovim
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/llakala/meovim
+      type: https
+  - name: gasp
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/llakala/gasp.git
+      type: https

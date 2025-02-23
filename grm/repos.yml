@@ -1,0 +1,39 @@
+trees:
+- root: ~/Documents/repos
+  repos:
+  - name: NixOS-Config
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/radioaddition/NixOS-Config
+      type: https
+  - name: nixpkgs
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/llakala/nixpkgs.git
+      type: https
+    - name: upstream
+      url: https://github.com/NixOS/nixpkgs.git
+      type: https
+  - name: splitpatch
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/llakala/splitpatch
+      type: https
+  - name: obsidian-latex-suite
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/llakala/obsidian-latex-suite.git
+      type: https
+    - name: upstream
+      url: https://github.com/artisticat1/obsidian-latex-suite.git
+      type: https
+  - name: flocon
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/nezia1/flocon
+      type: https
