@@ -16,9 +16,6 @@
   { trigger: "exi", replacement: "\\exists", options: "mA" },
   { trigger: "for", replacement: "\\forall", options: "mA" },
 
-  { trigger: "iin", replacement: "\\in", options: "mA", priority: -1 },
-  { trigger: "nin", replacement: "\\notin", options: "mA" },
-
   // Existing presets that I don't currently cover
   { trigger: "<->", replacement: "\\leftrightarrow ", options: "mA" },
   // { trigger: "!>", replacement: "\\mapsto", options: "mA" }, // NOT WORKING RIGHT NOW
