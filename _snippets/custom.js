@@ -28,6 +28,8 @@
 
   {trigger: "lim", replacement: "\\lim_{${0:x} \\to ${1:\\infty}} $2", options: "mA"},
 
+  {trigger: "~=", replacement: "\\approx", options: "mA"},
+
   // Sum and prod auto expanded
   {trigger: "sum", replacement: "\\sum_{${0:i}=${1:1}}^{${2:N}} $3", options: "mA"},
   {trigger: "isum", replacement: "\\sum_{${0:i}=${1:1}}^{\\infty} $2", options: "mA"}, // Infinite sum
@@ -65,6 +67,11 @@
 
   { trigger: "sq", replacement: "\\sqrt{ $0 }$1", options: "mA" }, // Manual brackets, like everywhere else
   { trigger: /(\d)rt/, replacement: "\\sqrt[[[0]]]{$0} $1", options: "mA"}, // Nth root
+
+
+   { trigger: "flr", replacement: "\\lfloor $0 \\rfloor $1", options: "mA" },
+
+    {trigger: "oo", replacement: "\\circ", options: "mA"},
 
   // Inverse / arc sin functions quickly
   { trigger: /i(sin|cos|tan|csc|sec|cot)/, replacement: "[[0]]^{-1}", options: "mA", priority: 1},
