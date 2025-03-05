@@ -228,7 +228,7 @@
   // Snippet replacements can also be JavaScript functions.
   // See the documentation for more information.
   {
-    trigger: "iden(\\d)", replacement: (match) => {
+    trigger: /iden(\d)/, replacement: (match) => {
       const n = match[1];
 
       let arr = [];
