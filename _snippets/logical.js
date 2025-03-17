@@ -1,12 +1,14 @@
 [
   { trigger: "or", replacement: "\\lor", options: "mA", priority: -1 },
-  { trigger: "|", replacement: "\\lor$0", options: "mA" }, // This breaks absolute value, so we use abs snippet instead
+  { trigger: "||", replacement: "\\lor$0", options: "mA" }, // This breaks absolute value, so we use abs snippet instead
 
   { trigger: "and", replacement: "\\land", options: "mA" },
-  { trigger: "&", replacement: "\\land$0", options: "mA" },
+  { trigger: "&&", replacement: "\\land$0", options: "mA" },
 
   { trigger: "not", replacement: "\\neg", options: "mA" },
-  { trigger: "!", replacement: "\\neg$0", options: "mA" },
+  { trigger: "!!", replacement: "\\neg$0", options: "mA" },
+
+
 
   { trigger: "xor", replacement: "\\oplus", options: "mA" },
 
