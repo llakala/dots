@@ -26,14 +26,14 @@
   {trigger: /dd([a-ce-z])/, replacement: "\\dfrac{d}{d[[0]]}\\left[ $0 \\right]$1", options: "mA"},
   {trigger: /d([a-ce-z])d([a-ce-z])/, replacement: "\\dfrac{d[[0]]}{d[[1]]}\\left[ $0 \\right]$1", options: "mA"},
 
-  {trigger: "lim", replacement: "\\lim_{${0:x} \\to ${1:\\infty}} $2", options: "mA"},
+  {trigger: "lim", replacement: "\\lim_{${0:n} \\to ${1:\\infty}} $2", options: "mA"},
 
   {trigger: "~=", replacement: "\\approx", options: "mA"},
 
   // Sum and prod auto expanded
-  {trigger: "sum", replacement: "\\sum_{${0:i}=${1:1}}^{${2:N}} $3", options: "mA"},
-  {trigger: "isum", replacement: "\\sum_{${0:i}=${1:1}}^{\\infty} $2", options: "mA"}, // Infinite sum
-  {trigger: "prod", replacement: "\\prod_{${0:i}=${1:1}}^{${2:N}} $3", options: "mA"},
+  {trigger: "sum", replacement: "\\sum_{${0:n}=${1:1}}^{${2:N}} $3", options: "mA"},
+  {trigger: "isum", replacement: "\\sum_{${0:n}=${1:1}}^{\\infty} $2", options: "mA"}, // Infinite sum
+  {trigger: "prod", replacement: "\\prod_{${0:n}=${1:1}}^{${2:N}} $3", options: "mA"},
 
   // `|` symbol for integrals
   {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}}$2", options: "mA", priority: -1 },
