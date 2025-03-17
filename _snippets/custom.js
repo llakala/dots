@@ -69,9 +69,12 @@
   { trigger: /(\d)rt/, replacement: "\\sqrt[[[0]]]{$0} $1", options: "mA"}, // Nth root
 
 
-   { trigger: "flr", replacement: "\\lfloor $0 \\rfloor $1", options: "mA" },
+  { trigger: "flr", replacement: "\\lfloor $0 \\rfloor $1", options: "mA" },
 
-    {trigger: "oo", replacement: "\\circ", options: "mA"},
+  {trigger: "oo", replacement: "\\circ", options: "mA"},
+
+  {trigger: "!|", replacement: "\\nmid", options: "mA"},
+  {trigger: "%", replacement: "\\%$0", options: "mA"},
 
   // Inverse / arc sin functions quickly
   { trigger: /i(sin|cos|tan|csc|sec|cot)/, replacement: "[[0]]^{-1}", options: "mA", priority: 1},
