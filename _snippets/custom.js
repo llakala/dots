@@ -70,6 +70,7 @@
 
 
   { trigger: "flr", replacement: "\\lfloor $0 \\rfloor $1", options: "mA" },
+  { trigger: "mod", replacement: "\\bmod", options: "mA" },
 
   {trigger: "oo", replacement: "\\circ", options: "mA"},
 
