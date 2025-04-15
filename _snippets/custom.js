@@ -11,9 +11,10 @@
   { trigger: "@D", replacement: "\\delta", options: "mA" },
   { trigger: "@e", replacement: "\\mathcal{E}", options: "mA" },
 
-  // Block letters
-  { trigger: /([A-GI-KM-Z]){2}/, replacement: "\\mathbb{[[0]]}", options: "mA" },
-  { trigger: /\\mathbb{(\w)}([\+\-])/, replacement: "\\mathbb{[[0]]}^[[1]]", options: "mA" }, // Positive/negative
+  // Use block letters when we get one of these letters twice
+  { trigger: /([A-GI-KM-Z])\1/, replacement: "\\mathbb{[[0]]}", options: "mA" },
+
+  { trigger: /\\mathbb{(\w)}([\+\-\d])/, replacement: "\\mathbb{[[0]]}^[[1]]", options: "mA" }, // Positive/negative
   { trigger: "LL", replacement: "\\mathcal{L}", options: "mA" },
   { trigger: "HH", replacement: "\\mathcal{H}", options: "mA" },
 
