@@ -77,6 +77,8 @@
   {trigger: "!|", replacement: "\\nmid", options: "mA"},
   {trigger: "%", replacement: "\\%$0", options: "mA"},
 
+  {trigger: "ang", replacement: "\\angle", options: "mA"},
+
   // Inverse / arc sin functions quickly
   { trigger: /i(sin|cos|tan|csc|sec|cot)/, replacement: "[[0]]^{-1}", options: "mA", priority: 1},
   { trigger: /a(sin|cos|tan)/, replacement: "\\arc[[0]]($0)$1", options: "mA", priority: 1},
