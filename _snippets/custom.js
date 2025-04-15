@@ -1,6 +1,6 @@
 [
-  {trigger: "(?<=\n)#t", replacement: "\\text{$0 } $1", options: "mrA"}, // Text at the beginning of a line
-  {trigger: "#t", replacement: "\\text{ $0 } $1", options: "mA", priority: -1}, // Text that isn't at the beginning of a line
+  {trigger: "(?<=\n)\"", replacement: "\\text{$0 } $1", options: "mrA"}, // Text at the beginning of a line
+  {trigger: "\"", replacement: "\\text{ $0 } $1", options: "mA", priority: -1}, // Text that isn't at the beginning of a line
 
   {trigger: "#d", replacement: "\\displaystyle ", options: "mA"},
   {trigger: "#b", replacement: "\\mathbf{$0}", options: "mA"},
