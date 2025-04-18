@@ -74,7 +74,7 @@
   { trigger: "nabl", replacement: "\\nabla", options: "mA" },
   { trigger: "del", replacement: "\\nabla", options: "mA" },
   { trigger: "xx", replacement: "\\times", options: "mA" },
-  { trigger: "**", replacement: "\\cdot", options: "mA" },
+  { trigger: "*", replacement: "\\cdot $0", options: "mA" },
   { trigger: "para", replacement: "\\parallel", options: "mA" },
 
   { trigger: "==", replacement: "\\equiv", options: "mA" },
