@@ -21,5 +21,5 @@
   // Existing presets that I don't currently cover
   { trigger: "<->", replacement: "\\leftrightarrow ", options: "mA" },
   // { trigger: "!>", replacement: "\\mapsto", options: "mA" }, // NOT WORKING RIGHT NOW
-  { trigger: "=<", replacement: "\\impliedby", options: "mA" },
+  { trigger: "<=", replacement: "\\impliedby", options: "mA" },
 ]
