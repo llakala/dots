@@ -18,14 +18,11 @@
   { trigger: "LL", replacement: "\\mathcal{L}", options: "mA" },
   { trigger: "HH", replacement: "\\mathcal{H}", options: "mA" },
 
-
   {trigger: "mk", replacement: "$$0$", options: "tA"},
   {trigger: "dm", replacement: "$$\n$0\n$$", options: "tAw"},
-  {trigger: "ml", replacement: "$$\n\\begin{gather}\n$0\n\\end{gather}\n$$$1", options: "tAw" }, // Multiline
+  // Multiline
+  {trigger: "ml", replacement: "$$\n\\begin{gather}\n$0\n\\end{gather}\n$$$1", options: "tAw" },
   {trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
-
-  {trigger: /dd([a-ce-z])/, replacement: "\\dfrac{d}{d[[0]]}\\left[ $0 \\right]$1", options: "mA"},
-  {trigger: /d([a-ce-z])d([a-ce-z])/, replacement: "\\dfrac{d[[0]]}{d[[1]]}$1", options: "mA"},
 
   {trigger: "lim", replacement: "\\lim_{${0:n} \\to ${1:\\infty}} $2", options: "mA"},
 
@@ -36,20 +33,9 @@
   {trigger: "isum", replacement: "\\sum_{${0:n}=${1:1}}^{\\infty} $2", options: "mA"}, // Infinite sum
   {trigger: "prod", replacement: "\\prod_{${0:n}=${1:1}}^{${2:N}} $3", options: "mA"},
 
-  // `|` symbol for integrals
-  {trigger: "at", replacement: "\\bigg\\rvert_{${0:a}}^{${1:b}}$2", options: "mA", priority: -1 },
   {trigger: "abs", replacement: "|$0|$1", options: "mA"},
 
   {trigger: "tta", replacement: "\\theta", options: "mA"},
-
-  // Indefinite and definite integrals, with a constant beforehand if needed
-  {trigger: /([^\\])int/, replacement: "[[0]]\\int $0 \\, d${1:x} $2", options: "mA", priority: -1},
-  {trigger: /([^\\])dint/, replacement: "[[0]]\\int_{${0:a}}^{${1:b}} $2 \\, d${3:x} $4", options: "mA", priority: -1},
-
-  // Weird types of integrals
-  {trigger: "oint", replacement: "\\oint", options: "mA"},
-	{trigger: "iint", replacement: "\\iint", options: "mA"},
-  {trigger: "iiint", replacement: "\\iiint", options: "mA"},
 
 // Select and press
   {
