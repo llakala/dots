@@ -55,16 +55,16 @@
   { trigger: "sq", replacement: "\\sqrt{ $0 }$1", options: "mA" }, // Manual brackets, like everywhere else
   { trigger: /(\d)rt/, replacement: "\\sqrt[[[0]]]{$0} $1", options: "mA"}, // Nth root
 
-
-  { trigger: "flr", replacement: "\\lfloor $0 \\rfloor $1", options: "mA" },
-  { trigger: "mod", replacement: "\\bmod", options: "mA" },
-
   {trigger: "oo", replacement: "\\circ", options: "mA"},
+  {trigger: "mod", replacement: "\\bmod", options: "mA" },
 
   {trigger: "!|", replacement: "\\nmid", options: "mA"},
   {trigger: "%", replacement: "\\%$0", options: "mA"},
 
   {trigger: "ang", replacement: "\\angle", options: "mA"},
+
+  {trigger: "flr", replacement: "\\lfloor $0 \\rfloor $1", options: "mA" },
+  {trigger: "ceil", replacement: "\\lceil $0 \\rceil $1", options: "mA" },
 
   // Inverse / arc sin functions quickly
   { trigger: /i(sin|cos|tan|csc|sec|cot)/, replacement: "[[0]]^{-1}", options: "mA", priority: 1},
