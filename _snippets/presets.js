@@ -178,7 +178,6 @@
   { trigger: "cases", replacement: "\\begin{cases}\n$0\n\\end{cases}", options: "mA" },
   { trigger: "array", replacement: "\\begin{array}\n$0\n\\end{array}", options: "mA" },
 
-
   // Brackets
   { trigger: "avg", replacement: "\\langle $0 \\rangle $1", options: "mA" },
   { trigger: "norm", replacement: "\\lvert $0 \\rvert $1", options: "mA", priority: 1 },
