@@ -9,7 +9,6 @@
   { trigger: "!!", replacement: "\\neg$0", options: "mA" },
 
 
-
   { trigger: "xor", replacement: "\\oplus", options: "mA" },
 
   { trigger: "imp", replacement: "\\implies", options: "mA" },
