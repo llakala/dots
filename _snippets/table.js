@@ -10,14 +10,12 @@
         for (let j = 0; j < cols; j++) {
 
           if (i == 0 && j == 0) {
-              arr[i][j] = "     ";
+            arr[i][j] = "     ";
           }
-          else if (i == 1)
-          {
+          else if (i == 1) {
             arr[i][j] = " --- ";
           }
-          else
-          {
+          else {
             arr[i][j] = " $$  ";
           };
         }
