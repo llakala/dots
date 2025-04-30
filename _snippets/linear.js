@@ -3,5 +3,5 @@
   { trigger: "len", replacement: "\\lvert\\lvert $1 \\rvert\\rvert $2", options: "mA" },
   { trigger: "comp", replacement: "\\text{comp}", options: "mA" },
   { trigger: "proj", replacement: "\\text{proj}", options: "mA" },
-  { trigger: "arr", replacement: "\\text{proj}", options: "mA" },
+  { trigger: "arr", replacement: "\\overrightarrow{$0} $1", options: "mA" },
 ]
