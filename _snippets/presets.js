@@ -81,8 +81,6 @@
   { trigger: "!=", replacement: "\\neq", options: "mA" },
   { trigger: ">=", replacement: "\\geq", options: "mA" },
   { trigger: "<=", replacement: "\\leq", options: "mA" },
-  { trigger: ">>", replacement: "\\gg", options: "mA" },
-  { trigger: "<<", replacement: "\\ll", options: "mA" },
   { trigger: "simm", replacement: "\\sim", options: "mA" },
   { trigger: "sim=", replacement: "\\simeq", options: "mA" },
   { trigger: "prop", replacement: "\\propto", options: "mA" },
