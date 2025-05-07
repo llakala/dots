@@ -21,7 +21,7 @@
         }
       }
 
-      return arr.map(r => '|' + r.join('|')).join('|\n') + '|';
+      return "\n" + arr.map(r => '|' + r.join('|')).join('|\n') + '|';
 
     }, options: "t", description: "N x N markdown table" // Text mode only
   },
